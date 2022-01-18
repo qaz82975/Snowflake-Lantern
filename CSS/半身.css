@@ -1,0 +1,45 @@
+.jpg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin: 0px auto;
+  margin-top: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.example {
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.example h4 {
+  margin-top: 15px;
+}
+
+.annotation {
+  width: 250px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.annotation ul {
+  list-style-type: disc;
+  padding-left: 60px;
+}
+
+.instruction {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 50px;
+  word-wrap: break-word;
+}
+
+.instruction h4, .instruction h5 {
+  margin: 20px 0;
+  text-align: center;
+  padding: 10px;
+}
+/*# sourceMappingURL=半身.css.map */

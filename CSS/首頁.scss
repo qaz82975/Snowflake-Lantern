@@ -1,0 +1,100 @@
+main{
+    // width: 100vw;
+   
+   .about{
+    width: 80%;
+    height: 1000px;
+    border: gray 1px solid;
+    margin: auto ;
+
+    // 暫時
+    div{
+        background-color: green;
+        height: 450px;
+        width: 450px;
+        float:right;
+    }
+    }
+    .work{
+           
+           
+        ul{
+        //  display: flex;
+        //  flex-wrap:wrap;
+         margin: 0 auto ;  
+           width: 90%;
+            
+        //  align-items: center;
+        
+           
+
+           li{
+            //    width: 23.6%;
+           
+                // margin: 10px;
+                // height: 200px;
+                // border: gray 1px solid;
+                padding: 20px;
+             display: flex;
+             height: 100%;
+
+             img{
+                margin: auto;
+                // width: 300px;
+                // height: 300px;
+                width: 98%;
+                height: 98%;
+               
+            }
+            }
+        }
+
+    }
+
+    .contact{
+        padding: 100px;
+    //    line-height: 100px;
+    margin: auto;
+    width: 80%;
+    // display: flex;
+
+    // align-items: center;
+    text-align:center;
+    }
+
+
+    }
+
+    @media (max-width: 1200px), print {
+
+
+        .contact{
+         
+        //    line-height: 100px;
+        margin: auto;
+        width: 80%;
+        // display: flex;
+    
+        // align-items: center;
+        text-align:center;
+        }
+
+
+
+    }
+
+    
+@media (max-width: 768px), print {
+ 
+    }
+   
+    
+
+   
+
+    
+
+
+
+
+
