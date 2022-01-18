@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron</title>
+    <link rel="icon" href="./logo_icon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="CSS/normalize.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap" rel="stylesheet">
+    <script src="./JS/index.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="CSS/style_header&footer.css">
+    <link rel="stylesheet" href="CSS/提醒.css">
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            /* /* list-style: none;/ */
+            font-family: 'Noto Serif TC', serif;
+
+
+
+
+
+        }
+
+
+
+
+
+
+        /* 加class */
+        header.fixed {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            animation: headerAni 0.3s;
+        }
+
+        @keyframes headerAni {
+            0% {
+                transform: translateY(-150px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+
+            var targetTop;      //負責隨時偵測取得上方的距離
+            var scrollTime;     //負責視窗捲動時偵測等待的時間
+
+            //判斷往上捲出的高度是否已超過header的高度, 如果header已捲出畫面則加上fixed的class名稱
+            function checkHeader() {
+                if ($(document).scrollTop() >= $('header').height()) {
+                    $('header').addClass('fixed');
+                    // $('.mnue ul').addClass('m_fixed')
+                }
+                if ($(document).scrollTop() == 0) {
+                    $('header').removeClass('fixed');
+                    // $('.mnue ul').removeClass('m_fixed')
+                }
+            }
+            checkHeader();
+
+            //當視窗捲動時==============================================================================
+            $(window).scroll(function () {
+                clearTimeout(scrollTime);
+                scrollTime = setTimeout(function () { checkHeader(); }, 100);
+            });
+
+            //     //當導覽列中的按鈕被點擊時, 讓整頁滑動到對應的區段中=========================================
+            //     $('nav a').click(function () {
+            //         targetTop = $($(this).attr('href')).position().top; //console.log(targetTop);
+            //         //控制整頁滑動
+            //         $('html,body').animate({ scrollTop: targetTop }, 500);
+
+            //         if ($('.showMenu').is(':visible')) { $('.showMenu').trigger('click'); }
+            //     });
+
+        });
+
+    </script>
+
+</head>
+
+<body">
+
+    <header>
+
+        <div class="header_group">
+            <input type="checkbox" id="burger">
+            <ul class="Aitem">
+                <li><a href="./首頁.html">
+                        <h6>委託首頁</h6>
+
+                    </a>
+                </li>
+                <li><a href="./頭貼委託.html">
+                        <h6>【非商業】頭貼</h6>
+
+                    </a>
+
+                </li>
+                <li><a href="./半身委託.html">
+                        <h6>【非商業】單人半身</h6>
+
+                    </a>
+
+                </li>
+
+                <li><a href="./全身委託.html">
+                        <h6>【非商業】單人全身</h6>
+
+                    </a>
+
+                </li>
+                <li><a href="./提醒.html">
+                        <h6>委託方式</h6>
+
+                    </a>
+
+                </li>
+            </ul>
+
+
+
+
+            <div class="burger_group">
+
+
+                <div class="header_group_right">
+
+
+                    <div class="header_community">
+                        <a href="https://www.facebook.com/">
+                            <div>
+                                <img src="./img/facebook_icon.svg" alt="facebook_img">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <div>
+                                <img src="./img/instagram_icon.svg" alt="instagram_img">
+                            </div>
+                        </a>
+
+
+
+
+                    </div>
+
+                    <label for="burger">
+                        <div>
+
+                        </div>
+                        <img type="button" src="./img/漢堡.svg" style="height: 30px;">
+                    </label>
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div>
+            <h4>
+                ⁘⁘委託方式⁘⁘
+            </h4>
+            <h5>
+                來信委託→草稿完後付款→完成交稿
+            </h5>
+
+            擇一聯絡管道詢問即可<br>
+            ​ↈ委託前麻煩詳讀注意事項以便更順利進行作業~謝謝您ↈ<br>
+            <h5>
+                ​付款方式提供
+            </h5>
+            轉帳/匯款<br>
+            海外PayPal<br>
+            *產生手續費須自付*<br>
+
+            需付款時會再提供帳戶訊息
+            <h4>
+                ⁘⁘聯絡方式⁘⁘
+            </h4>
+            <h5>
+
+                信箱<br>
+
+            </h5>
+            <a href="mailto:ronemail1998@gmail.com">ronemail1998@gmail.com</a>
+            <!-- ronemail1998@gmail.com<br> -->
+            <h5>fb粉專</h5>
+            <a target="_blank" href="https://www.facebook.com/%E6%B2%90%E5%AF%92%E8%9E%8D%E9%9B%AA-2141391352549905">
+                沐寒融雪</a>
+
+            <h5>​IG</h5>
+            <a target="_blank" href="https://www.instagram.com/ron.eros/"> ron.eros</a>
+            <a target="_blank" href="https://www.pixiv.net/users/6657994">
+                <h5>Pixiv</h5>
+            </a>
+            <a target="_blank" href="https://twitter.com/qaz82975">
+                 <h5>twitter</h5>
+            </a>
+
+
+           
+
+
+            <h4>
+                ⁘⁘詢問格式⁘⁘
+            </h4>
+
+
+
+
+            <div style="text-align: start;">
+
+                ​<h5>
+                   【委託】 插畫委託詢問
+                </h5>
+                委託項目:<br>
+
+                敘述與參考照片: (大概的構想設定與參考資料)<br>
+                付款方式:<br>
+                是否急用:<br>
+                備註補充:<br>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </main>
+
+    <footer>
+
+        <div class="footer_end">
+            <p>2022❄雪花燈籠<br>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <aside>
+
+    </aside>
+
+
+    </body>
+
+</html>

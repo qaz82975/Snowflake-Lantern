@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron</title>
+    <link rel="icon" href="./logo_icon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="CSS/normalize.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap" rel="stylesheet">
+    <script src="./JS/index.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="CSS/style_header&footer.css">
+    <link rel="stylesheet" href="CSS/頭貼.css">
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            /* /* list-style: none;/ */
+            font-family: 'Noto Serif TC', serif;
+
+
+
+
+
+        }
+
+
+
+
+
+
+        /* 加class */
+        header.fixed {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            animation: headerAni 0.3s;
+        }
+
+        @keyframes headerAni {
+            0% {
+                transform: translateY(-150px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+
+            var targetTop;      //負責隨時偵測取得上方的距離
+            var scrollTime;     //負責視窗捲動時偵測等待的時間
+
+            //判斷往上捲出的高度是否已超過header的高度, 如果header已捲出畫面則加上fixed的class名稱
+            function checkHeader() {
+                if ($(document).scrollTop() >= $('header').height()) {
+                    $('header').addClass('fixed');
+                    // $('.mnue ul').addClass('m_fixed')
+                }
+                if ($(document).scrollTop() == 0) {
+                    $('header').removeClass('fixed');
+                    // $('.mnue ul').removeClass('m_fixed')
+                }
+            }
+            checkHeader();
+
+            //當視窗捲動時==============================================================================
+            $(window).scroll(function () {
+                clearTimeout(scrollTime);
+                scrollTime = setTimeout(function () { checkHeader(); }, 100);
+            });
+
+            //     //當導覽列中的按鈕被點擊時, 讓整頁滑動到對應的區段中=========================================
+            //     $('nav a').click(function () {
+            //         targetTop = $($(this).attr('href')).position().top; //console.log(targetTop);
+            //         //控制整頁滑動
+            //         $('html,body').animate({ scrollTop: targetTop }, 500);
+
+            //         if ($('.showMenu').is(':visible')) { $('.showMenu').trigger('click'); }
+            //     });
+
+        });
+
+    </script>
+
+</head>
+
+<body">
+
+    <header>
+
+        <div class="header_group">
+            <input type="checkbox" id="burger">
+            <ul class="Aitem">
+                <li><a href="./首頁.html">
+                        <h6>委託首頁</h6>
+
+                    </a>
+                </li>
+                <li><a href="./頭貼委託.html">
+                        <h6>【非商業】頭貼</h6>
+
+                    </a>
+
+                </li>
+                <li><a href="./半身委託.html">
+                        <h6>【非商業】單人半身</h6>
+
+                    </a>
+
+                </li>
+
+                <li><a href="./全身委託.html">
+                        <h6>【非商業】單人全身</h6>
+
+                    </a>
+
+                </li>
+                <li><a href="./提醒.html">
+                        <h6>委託提醒</h6>
+
+                    </a>
+
+                </li>
+            </ul>
+
+
+
+
+            <div class="burger_group">
+
+
+                <div class="header_group_right">
+
+
+                    <div class="header_community">
+                        <a href="https://www.facebook.com/">
+                            <div>
+                                <img src="./img/facebook_icon.svg" alt="facebook_img">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <div>
+                                <img src="./img/instagram_icon.svg" alt="instagram_img">
+                            </div>
+                        </a>
+
+
+
+
+                    </div>
+
+                    <label for="burger">
+                        <div>
+
+                        </div>
+                        <img type="button" src="./img/漢堡.svg" style="height: 30px;">
+                    </label>
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="jpg row">
+            <div class="col-12 col-xl-6">
+                <div class="example">
+                    <img src="https://placem.at/things?" style="width: 100%;">
+                    <h4>一般上色 700 TWD起</h4>
+                    <ul>
+                        <li>單色背景(可透明)</li>
+                        <li> 簡易背景+300NTD</li>
+                        <li>​胸上範圍</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <div class="example">
+                    <img src="https://placem.at/things?" style="width: 100%;">
+                    <h4>精緻上色 1000 TWD起</h4>
+                    <ul>
+                        <li>單色背景(可透明)</li>
+                        <li> 簡易背景+300NTD</li>
+                        <li>​胸上範圍</li>
+                        <li> ​改厚塗+300 NTD</li>
+                    </ul> 
+                </div>
+            </div>
+
+        </div>
+
+        <div class="instruction">
+            <h4>⁘⁘流程⁘⁘<br><br>
+                草稿確認→到款項→完成交稿</h4>
+            <h5>⁘⁘注意事項⁘⁘</h5>
+            <p>
+                確定委託麻煩附圖讓我參考<br>
+                草稿確定後不能大修<br>
+                總共修改次數2次，希望能把問題集中提出(若是我方失誤超出次數不會計算)<br>
+                超出額外修改次數+150 TWD<br>
+                此為自己收藏非商用價格，要商用麻煩通知會另行報價<br>
+                成品​繪師可公開自由發佈(會加水印壓畫質等處理)，委託者可自由發佈但須註明繪師，不接受繪師公開發佈需額外收費<br>
+                有加急需求先詢問，加急費為400 TWD up<br>
+                工期約為一個月內會完稿，實際情況在詢問時照情形說明<br>
+                交稿使用Google雲端連結 or Email ，檔案格式未特別告知都給jpg(選擇Google雲端須盡速保存，因儲存空間有限定期會清理檔案)
+
+            </p>
+
+
+        </div>
+
+
+
+    </main>
+
+    <footer>
+
+        <div class="footer_end">
+            <p>2022❄雪花燈籠<br>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <aside>
+
+    </aside>
+
+
+    </body>
+
+</html>
