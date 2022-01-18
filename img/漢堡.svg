@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195.85 162.78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: 0.8;
+      }
+    </style>
+  </defs>
+  <g id="圖層_2" data-name="圖層 2">
+    <g id="圖層_1-2" data-name="圖層 1">
+      <rect class="cls-1" x="24.36" width="147.13" height="20.35"/>
+      <rect class="cls-1" x="24.36" y="71.22" width="147.13" height="20.35"/>
+      <rect class="cls-1" x="24.36" y="142.43" width="147.13" height="20.35"/>
+      <g class="cls-2">
+        <path class="cls-1" d="M164.61,134.43h15.64a97.76,97.76,0,0,0-.08-106.08h-15.6a85.14,85.14,0,0,1,0,106.08Z"/>
+      </g>
+      <g class="cls-2">
+        <path class="cls-1" d="M24.36,134.43h6.87a85.23,85.23,0,0,1,0-106.08H15.61a98,98,0,0,0,0,106.08Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
